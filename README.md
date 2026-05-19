@@ -1,6 +1,6 @@
 # AI Agents Workflows Command Central Frontend
 
-Frontend prototype for designing, reviewing, and monitoring AI agent workflows from one command-center interface.
+Open source React frontend for AI agents workflow orchestration, observability dashboards, traces, memory views, and command-center operations.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
