@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-base: #07080E;
+  --color-surface-elevated: #0D0F17;
+  --color-surface-raised: #131622;
+  --color-surface-floating: #181C29;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.04);
+  --color-border-default: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.12);
+  --color-border-focus: #5D4D94;
+
+  --color-text-primary: #E2E6EC;
+  --color-text-secondary: #979EAE;
+  --color-text-tertiary: #6C738A;
+  --color-text-disabled: #4D5368;
+  --color-text-inverse: #0B0D14;
+
+  --color-primary-50: oklch(95% 0.02 240);
+  --color-primary-100: oklch(90% 0.04 240);
+  --color-primary-200: oklch(80% 0.06 240);
+  --color-primary-300: oklch(70% 0.08 240);
+  --color-primary-400: oklch(60% 0.11 240);
+  --color-primary-500: oklch(50% 0.14 240);
+  --color-primary-600: oklch(40% 0.14 240);
+
+  --color-semantic-success: oklch(70% 0.12 150);
+  --color-semantic-warning: oklch(75% 0.14 55);
+  --color-semantic-danger: oklch(65% 0.16 20);
+  --color-semantic-info: oklch(70% 0.12 250);
+
+  --font-sans: "Segoe UI Variable Text", "Aptos", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.20);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.25);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-glow: 0 0 0 1px rgba(69,111,200,0.15), 0 4px 16px rgba(69,111,200,0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-surface-base text-text-primary font-sans antialiased;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full cursor-pointer;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+
+  .react-flow__controls {
+    background-color: var(--color-surface-raised) !important;
+    border: 1px solid var(--color-border-default) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
+  
+  .react-flow__controls-button {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--color-border-subtle) !important;
+    color: var(--color-text-secondary) !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 150ms ease !important;
+  }
+
+  .react-flow__controls-button:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--color-text-primary) !important;
+  }
+
+  .react-flow__controls-button:last-child {
+    border-bottom: none !important;
+  }
+
+  .react-flow__controls-button svg {
+    width: 14px !important;
+    height: 14px !important;
+    fill: currentColor !important;
+  }
+}

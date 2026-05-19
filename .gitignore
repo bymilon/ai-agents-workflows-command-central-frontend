@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+coverage/
+.bun-tmp/
+.wrangler/
+.DS_Store
+*.log
+.env*
